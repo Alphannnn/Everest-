@@ -1,10 +1,12 @@
-import GromuseNavbar from '../components/GromuseNavbar';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
 
 function Home() {
   return (
-    <div>
-      <GromuseNavbar />
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
 }
 
