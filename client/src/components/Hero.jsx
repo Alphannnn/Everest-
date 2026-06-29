@@ -35,7 +35,7 @@ function Hero() {
           </p>
 
           <button className="mt-6 bg-yellow-500 text-black px-8 py-3 rounded-2xl font-semibold hover:scale-105 transition">
-            Shop now
+            Shop Now
           </button>
         </div>
 
