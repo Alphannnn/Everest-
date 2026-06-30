@@ -41,7 +41,7 @@ function Hero() {
 
         {/* Grocery Image */}
         <div className="absolute right-0 bottom-0 w-[55%] h-full flex items-end justify-center">
-          <img src="/grocery.png" className="w-[540px] object-contain" />
+          <img src="/Grocery.png" className="w-[540px] object-contain" />
         </div>
       </div>
     </section>
