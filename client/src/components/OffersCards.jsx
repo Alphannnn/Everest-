@@ -2,7 +2,7 @@ const offers = [
   {
     id: 1,
     title: "Save",
-    offer: "$29",
+    offer: "$40",
     description: "Enjoy Discount all types of Grocery & frozen item",
     topBg: "#FFD7E6",
     bottomBg: "#5D2A8C",
