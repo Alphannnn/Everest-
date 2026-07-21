@@ -4,11 +4,15 @@ const offers = [
     title: "Save",
     offer: "$29",
     description: "Enjoy Discount all types of Grocery & frozen item",
-    topBg: "#FFD7E6",
+      topBg: "#fdc7db",
     bottomBg: "#5D2A8C",
+
+    titleColor: "#7B1E5B",   // Pink bg ke matching
+    offerColor: "#7B1E5B",
     image: "/offers/wheat.png",
 
-    imageWidth: "w-[280px]"
+    imageWidth: "w-[280px]",
+      icon: "flower",
     
   },
 
@@ -17,11 +21,14 @@ const offers = [
     title: "Discount",
     offer: "30%",
     description: "Enjoy Discount all types of Grocery & frozen item",
-    topBg: "#FFE8D6",
+    topBg: "#fddfc7",
     bottomBg: "#D97A34",
+     titleColor: "#A44A00",   // Orange bg ke matching
+    offerColor: "#A44A00",
     image: "/offers/peanut.png",
 
-    imageWidth: "w-[280px]"
+    imageWidth: "w-[280px]",
+     icon: "rays",
   
   },
 
@@ -30,12 +37,15 @@ const offers = [
     title: "Up to",
     offer: "50%",
     description: "Enjoy Discount all types of Grocery & frozen item",
-    topBg: "#DDF5FF",
+    topBg: "#c8efff",
     bottomBg: "#2D76C7",
+
+    titleColor: "#1E5AA8",   // Blue bg ke matching
+    offerColor: "#1E5AA8",
     image: "/offers/skippy.png",
 
-    imageWidth: "w-[280px]"
-    
+    imageWidth: "w-[280px]",
+    icon: "badge",
   },
 
   {
@@ -43,12 +53,15 @@ const offers = [
     title: "Free",
     offer: "SHIP",
     description: "Enjoy Discount all types of Grocery & frozen item",
-    topBg: "#F7D9FF",
+    topBg: "#f2c8fd",
     bottomBg: "#8A39B8",
+
+    titleColor: "#8A2CA5",   // Purple bg ke matching
+    offerColor: "#8A2CA5",
     image: "/offers/corn.png",
 
-    imageWidth: "w-[280px]"
-    
+    imageWidth: "w-[280px]",
+    icon: "spark",
   },
 ];
 
@@ -85,57 +98,77 @@ const OfferCards = () => {
 
               {/* Top Right Icon */}
 
-              <div
-                className="
-                  absolute
-                  top-6
-                  right-6
-                  w-11
-                  h-11
-                  rounded-full
-                  bg-white/70
-                  backdrop-blur-md
-                  flex
-                  items-center
-                  justify-center
-                  shadow-sm
-                "
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  fill="none"
-                  stroke="#444"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"/>
-                </svg>
-              </div>
+             <div
+  className="
+    absolute
+    top-6
+    right-6
+    flex
+    items-center
+    justify-center
+    text-gray-600
+    z-30
+  "
+>
+  {offer.icon === "flower" && (
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#666" strokeWidth="1.8">
+      <circle cx="12" cy="12" r="3"/>
+      <circle cx="12" cy="4" r="2"/>
+      <circle cx="12" cy="20" r="2"/>
+      <circle cx="4" cy="12" r="2"/>
+      <circle cx="20" cy="12" r="2"/>
+      <circle cx="6.5" cy="6.5" r="2"/>
+      <circle cx="17.5" cy="6.5" r="2"/>
+      <circle cx="6.5" cy="17.5" r="2"/>
+      <circle cx="17.5" cy="17.5" r="2"/>
+    </svg>
+  )}
+
+  {offer.icon === "rays" && (
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#666" strokeWidth="2">
+      <path d="M12 3V7"/>
+      <path d="M17 5L15.5 8"/>
+      <path d="M21 10L17.5 11"/>
+      <path d="M20 16L16.5 14"/>
+      <path d="M15 20L13.5 16"/>
+      <path d="M9 20L10.5 16"/>
+      <path d="M4 16L7.5 14"/>
+      <path d="M3 10L6.5 11"/>
+    </svg>
+  )}
+
+  {offer.icon === "badge" && (
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#666" strokeWidth="1.8">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M9 12L7 20L12 17L17 20L15 12"/>
+      <circle cx="12" cy="8" r="1"/>
+    </svg>
+  )}
+
+  {offer.icon === "spark" && (
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#666" strokeWidth="1.8">
+      <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"/>
+      <circle cx="19" cy="5" r="1"/>
+      <circle cx="5" cy="19" r="1"/>
+    </svg>
+  )}
+</div>
 
               {/* Text */}
 
-              <h4
-                className="
-                  text-[23px]
-                  font-semibold
-                  text-gray-800
-                "
-              >
-                {offer.title}
-              </h4>
+                           <h4
+  style={{ color: offer.titleColor }}
+  className="text-[23px] font-semibold"
+>
+  {offer.title}
+</h4>
 
-              <h1
-                className="
-                  text-[62px]
-                  font-extrabold
-                  leading-none
-                  text-gray-900
-                  mt-2
-                "
-              >
-                {offer.offer}
-              </h1>
+                        <h1
+  style={{ color: offer.offerColor }}
+  className="text-[62px] font-extrabold leading-none mt-2"
+>
+  {offer.offer}
+</h1>
 
               <p
                 className="
